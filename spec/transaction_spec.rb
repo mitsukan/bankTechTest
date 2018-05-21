@@ -2,8 +2,6 @@ require "./transaction.rb"
 
 describe ".Transaction" do
 
-
-
   describe "#deposit" do
 
     it "can deposit 10" do
