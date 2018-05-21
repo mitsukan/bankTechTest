@@ -1,4 +1,4 @@
-class BankAccount
+class Transaction
 
   attr_reader :balance
 

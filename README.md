@@ -15,3 +15,7 @@ the user can print out a bank statement of activity.
 Domain model:
 
 User can interact with the `BankAccount` to `.deposit` and `.withdraw`. User can `.print` a statement using information from the `BankAccount`.
+
+Changes:
+
+User can initiate transactions that take a command and a date: `.deposit(amount, date)`. Each transaction gets pushed into a `Account` class that stores transactions in arrays.
