@@ -8,8 +8,8 @@ describe ".BankAccount" do
 
     it "can deposit 10 into the BankAccount" do
       account = BankAccount.new
-      account.deposit(10)
-      expect(account.balance).to eq(10)
+      account.deposit(10.00)
+      expect(account.balance).to eq(10.00)
     end
 
   end
