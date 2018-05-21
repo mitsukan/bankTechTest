@@ -24,7 +24,7 @@ describe ".Transaction" do
 
     it "can withdraw 10" do
       account = Transaction.new
-      account.withdraw(10.00)
+      account.withdraw(10.00, "moo")
       expect(account.balance).to eq(-10.00)
     end
 
