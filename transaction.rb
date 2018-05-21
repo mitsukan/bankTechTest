@@ -7,12 +7,13 @@ class Transaction
     @date = 0
   end
 
-  def deposit(sum,date)
+  def deposit(sum, date)
     @balance += sum
     @date = date
   end
 
-  def withdraw(sum)
+  def withdraw(sum, date)
     @balance -= sum
+    @date = date
   end
 end
