@@ -24,8 +24,14 @@ describe ".Transaction" do
 
     it "can withdraw 10" do
       account = Transaction.new
-      account.withdraw(10.00)
+      account.withdraw(10.00, "moo")
       expect(account.balance).to eq(-10.00)
+    end
+
+    it "withdraw method has a date" do
+      transaction = Transaction.new
+      transaction.withdraw(10, "01-07-2014")
+      expect(transaction.date).to eq("01-07-2014")
     end
 
   end
