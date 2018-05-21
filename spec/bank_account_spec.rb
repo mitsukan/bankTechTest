@@ -14,5 +14,14 @@ describe ".BankAccount" do
 
   end
 
+  describe "#withdraw" do
+
+    it "can withdraw 10 into the BankAccount" do
+      account = BankAccount.new
+      account.withdraw(10)
+      expect(account.balance).to eq(-10)
+    end
+
+  end
 
 end
