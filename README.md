@@ -23,3 +23,5 @@ User can initiate transactions that take a command and a date: `.deposit(amount,
 Will need a `BankAccount` class to store the transactions in arrays.
 
 With this methodology, a print class can take the amounts from each array, run through the transactions and print out the balance for each transaction.
+
+The reason why I would place the responsibility of balance calculations in the `Print` class is if any transactions need to be edited, it won't affect the balance calculations for any of the other balances.
