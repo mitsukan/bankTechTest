@@ -11,7 +11,14 @@ class Account
 
   def newEntry(date, amount)
     @balance += amount
-    @transactions.push([date, amount, @balance])
+    @credit = 0
+    @debit = 0
+    if amount >= 0
+      @credit += amount
+    else
+      @debit -= amount
+    end
+    @transactions.push([date, @credit, @debit, @balance])
   end
 
 end
