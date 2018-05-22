@@ -6,7 +6,7 @@ class Printer
 
   def entry(transactions)
     transactions.reverse_each do |entry|
-      puts entry
+      
     end
 
   end
