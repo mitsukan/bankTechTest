@@ -9,17 +9,25 @@ class Printer
       @output = ""
       @incrementor = 0
       entry.each do |item|
-        @output += entry[@incrementor].to_s
-        if @incrementor < 3
-          @output += " || "
-          @incrementor += 1
+        if item == "0.00"
+          @output = @output.chop
         else
-          break
+          @output += entry[@incrementor].to_s
         end
+        columnizer
+        @incrementor += 1
       end
       puts @output
     end
 
   end
+
+  private
+  def columnizer
+    if @incrementor < 3
+      @output += " || "
+    end
+  end
+
 
 end

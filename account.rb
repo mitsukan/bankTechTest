@@ -18,7 +18,7 @@ class Account
     else
       @debit -= amount
     end
-    @transactions.push([date, @credit, @debit, @balance])
+    @transactions.push([date, sprintf('%.2f', @credit), sprintf('%.2f', @debit), sprintf('%.2f', @balance)])
   end
 
 end
