@@ -38,7 +38,7 @@ describe "#Bank" do
       bank.enter_transaction("13-01-2012", 2000.0)
       bank.enter_transaction("14-01-2012", -500.0)
       expect do
-        bank.print_statement
+        bank.print_statement(bank.account.transactions)
       end.to output("14-01-2012 || || 500.00 || 2500.00\n" "13-01-2012 || 2000.00 || || 3000.00\n"  "10-01-2012 || 1000.00 || || 1000.00\n").to_stdout
     end
 
