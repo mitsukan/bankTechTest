@@ -16,7 +16,8 @@ class Bank
     self.account.newEntry(date, amount)
   end
 
-  def print_statement(transactions)
+  def print_statement
+    self.printer.header
     self.printer.entry(self.account.transactions)
   end
 
