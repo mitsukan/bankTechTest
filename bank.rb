@@ -12,4 +12,10 @@ class Bank
     @printer = Printer.new
   end
 
+  def enter_transaction(date, amount)
+    self.account.newEntry(date, amount)
+  end
+
+
+
 end
