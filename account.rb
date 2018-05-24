@@ -11,9 +11,12 @@ class Account
 
   def newEntry(date, amount)
     @balance += amount
-    @credit = 0
-    @debit = 0
-    amount >= 0 ? @credit += amount : @debit -= amount
+    amounts  = [amount, 0].sort
+    @debit = -amounts[0]
+    @credit = amounts[1]
+    # @credit = 0
+    # @debit = 0
+    # amount >= 0 ? @credit += amount : @debit -= amount
     @transactions.push([date, sprintf('%.2f', @credit), sprintf('%.2f', @debit), sprintf('%.2f', @balance)])
   end
 
