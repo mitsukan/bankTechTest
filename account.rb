@@ -13,11 +13,7 @@ class Account
     @balance += amount
     @credit = 0
     @debit = 0
-    if amount >= 0
-      @credit += amount
-    else
-      @debit -= amount
-    end
+    amount >= 0 ? @credit += amount : @debit -= amount
     @transactions.push([date, sprintf('%.2f', @credit), sprintf('%.2f', @debit), sprintf('%.2f', @balance)])
   end
 

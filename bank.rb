@@ -6,10 +6,10 @@ class Bank
 
   attr_reader :account, :transaction, :printer
 
-  def initialize
-    @account = Account.new
-    @transaction = Transaction.new
-    @printer = Printer.new
+  def initialize(account: Account, printer: Printer)
+
+    @account = account.new
+    @printer = printer.new
   end
 
   def enter_transaction(date, amount)
