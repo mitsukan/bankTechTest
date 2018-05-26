@@ -10,7 +10,7 @@ class Printer
       @incrementor = 0
       entry.each do |item|
         if item == "0.00"
-          @output = @output.chop
+          columizer_corrector
         else
           @output += entry[@incrementor].to_s
         end
@@ -23,11 +23,15 @@ class Printer
   end
 
   private
+
   def columnizer
     if @incrementor < 3
       @output += " || "
     end
   end
 
+  def columizer_corrector
+    @output = @output.chop
+  end
 
 end

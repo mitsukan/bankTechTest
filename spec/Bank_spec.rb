@@ -41,8 +41,3 @@ describe Bank do
   end
 
 end
-
-# transaction2 = Transaction.new
-# transaction2.deposit(2000.0, "13-01-2012")
-# transaction3 = Transaction.new
-# transaction3.withdraw(500.0, "14-01-2012")
